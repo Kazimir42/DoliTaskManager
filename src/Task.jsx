@@ -33,7 +33,7 @@ const Task = ({apiUrl, apiKey, selectedTask, defaultDuration}) => {
     function DurationButton({duration}) {
         return (
             <div
-                className={'p-2 rounded text-md text-center cursor-pointer ' + (selectedDuration == duration ? 'bg-blue-700 text-white' : 'bg-white')}
+                className={'p-2 rounded text-md text-center cursor-pointer ' + (selectedDuration == duration ? 'bg-purple-600 text-white' : 'bg-white')}
                 onClick={() => setSelectedDuration(duration)}>
                 {duration} min
             </div>
@@ -111,8 +111,8 @@ const Task = ({apiUrl, apiKey, selectedTask, defaultDuration}) => {
             <div className={'text-center mb-4 px-4'}>
                 {task?.subject}
             </div>
-            <div className={'mx-auto w-80'}>
-                <div className={'grid grid-cols-4 gap-1 items-center mb-2'}>
+            <div className={'mx-auto w-80 bg-white p-4 rounded-lg shadow'}>
+                <div className={'grid grid-cols-4 gap-2 items-center mb-2'}>
                     <DurationButton duration={5}/>
                     <DurationButton duration={10}/>
                     <DurationButton duration={15}/>
@@ -121,12 +121,12 @@ const Task = ({apiUrl, apiKey, selectedTask, defaultDuration}) => {
                     <DurationButton duration={60}/>
                     <DurationButton duration={120}/>
                     <input type={'number'} value={selectedDuration}
-                           className={'p-2 rounded text-md text-center bg-white border-2 border-blue-700'}
+                           className={'p-2 rounded text-md text-center bg-white border-2 border-purple-600'}
                            onChange={(e) => setCustomerDuration(e.target.value)}/>
                 </div>
                 <div className={'grid grid-cols-6 gap-2 items-center h-12 mb-6'}>
                     <div
-                        className={'col-span-1 h-full content-center p-2 bg-white text-center hover:bg-blue-700 cursor-pointer rounded hover:text-white'}
+                        className={'col-span-1 h-full content-center p-2 bg-white text-center hover:bg-purple-600 cursor-pointer rounded hover:text-white'}
                         onClick={() => updateTime('minus')}>
                         -
                     </div>
@@ -138,13 +138,13 @@ const Task = ({apiUrl, apiKey, selectedTask, defaultDuration}) => {
                         }
                     </div>
                     <div
-                        className={'col-span-1 h-full p-2 content-center bg-white text-center hover:bg-blue-700 cursor-pointer rounded hover:text-white'}
+                        className={'col-span-1 h-full p-2 content-center bg-white text-center hover:bg-purple-600 cursor-pointer rounded hover:text-white'}
                         onClick={() => updateTime('plus')}>
                         +
                     </div>
                 </div>
-                <div className={'grid gap-1 items-center mb-8'}>
-                    <input type={'text'} className={'p-2 rounded bg-white'} placeholder={'Note'} value={note}
+                <div className={'grid gap-2 items-center mb-8'}>
+                    <input type={'text'} className={'p-2 rounded-lg border bg-white'} placeholder={'Note'} value={note}
                            onChange={(e) => setNote(e.target.value)}/>
                 </div>
                 <div className={'mx-auto text-center'}>

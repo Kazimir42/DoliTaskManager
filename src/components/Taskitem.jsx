@@ -5,7 +5,7 @@ import React from "react";
 const TaskItem = ({task, selectTask, showOnlyMyTasks, setTaskPinned}) => {
     return (
         <div
-            className={'bg-white rounded py-2 pr-2 w-full cursor-pointer hover:shadow-lg grid grid-cols-8'}
+            className={'bg-white rounded-lg py-2 pr-3 pl-2 w-full cursor-pointer shadow hover:shadow-xl transition-shadow grid grid-cols-8'}
             onClick={() => selectTask(task)}
         >
             <div className={'col-span-1 flex items-center'}>

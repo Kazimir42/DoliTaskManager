@@ -27,7 +27,7 @@ const Header = ({view, setView}) => {
     }
 
     return (
-        <div className={'flex flex-row justify-between bg-blue-700 p-2 items-center text-white'}>
+        <div className={'flex flex-row justify-between bg-gradient-to-r from-purple-600 to-blue-600 p-3 items-center text-white shadow-md'}>
             <div className={'flex flex-row gap-2 items-center'}>
                 {getBackView() ?
                     <div onClick={() => setView(getBackView())} className={'cursor-pointer'}>

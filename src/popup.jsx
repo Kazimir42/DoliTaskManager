@@ -110,7 +110,7 @@ const App = () => {
     return (
         <>
             <Header view={view} setView={setView} setSelectedTask={setSelectedTask}/>
-            <div className={'w-full h-full p-2 bg-blue-100'}>
+            <div className={'w-full h-full p-3 bg-gradient-to-br from-blue-50 to-blue-200'}>
 
                 {view === 'home' ?
                     <Home apiKey={apiKey} apiUrl={apiUrl} showOnlyMyTasks={showOnlyMyTasks}
